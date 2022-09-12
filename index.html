@@ -9,11 +9,11 @@
   </head>
   <body style="height: 100vh">
     <!-- navbar -->
-    <nav class="bg-gray-400 border-gray-200 pl-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <nav class="bg-gray-400 border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900">
       <div class="flex flex-wrap justify-between items-center mx-auto">
         <a href="/" class="flex items-center">
           <img src="assets/images/keyIcon.png" height="50px" width="50px" class="bg-blue-100 rounded-full" alt="Flowbite Logo" />
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Password Generator</span>
+          <span class="self-center text-sm sm:text-3xl font-semibold whitespace-nowrap dark:text-white">Generator Password</span>
         </a>
         <div class="flex justify-center items-center">
           <div class="hidden relative md:block">
@@ -47,13 +47,13 @@
           <div class="flex pl-2">
             <button
               type="button"
-              class="py-2 px-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              class="py-2 px-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
               Sign In
             </button>
             <button
               type="button"
-              class="py-2 px-3 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+              class="py-2 px-3 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
             >
               Sign Up
             </button>
@@ -79,21 +79,20 @@
 
     <!-- content -->
     <section style="height: 90vh">
-      <form style="padding-top: 20vh; padding-right: 10vh; padding-left: 10vh">
+      <div style="padding-top: 20vh; padding-right: 10vh; padding-left: 10vh">
         <div class="mb-6">
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+          <label for="lenghtPassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lenght Password</label>
           <input
             type="number"
-            id="email"
+            id="lenghtPassword"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Masukkan Panjang Password"
-            required=""
           />
         </div>
         <div class="mb-6">
           <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password :</label>
           <input
-            type="text"
+            type="password"
             id="password"
             aria-label="disabled input"
             class="mb-6 bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -104,28 +103,32 @@
         <div>
           <button
             type="submit"
+            onclick="submit()"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Submit
           </button>
         </div>
         <div>
-          <button
+          <a
             type="submit"
+            href=""
+            id="downloadButton"
+            onclick="savePassword()"
             class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             style="margin-top: 25vh"
           >
-            Save Your Password
-          </button>
+            Download Your Password
+          </a>
         </div>
-      </form>
+      </div>
     </section>
 
     <!-- footer -->
     <div class="text-center bg-gray-400 border-gray-200 rounded dark:bg-gray-900">
       <h3>Created By Nofra</h3>
     </div>
-
+    <script src="data.js"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
   </body>
 </html>
